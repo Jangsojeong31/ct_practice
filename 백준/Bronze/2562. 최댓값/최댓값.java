@@ -1,13 +1,15 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-		Scanner sc = new Scanner(System.in);
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		int[] nums = new int[9];
 		
 		for(int i = 0; i < nums.length; i++) {
-			nums[i] = sc.nextInt();
+			nums[i] = Integer.parseInt(bf.readLine());
 		}
 		
 		int max = 0;
