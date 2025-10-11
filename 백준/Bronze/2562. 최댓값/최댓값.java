@@ -8,19 +8,20 @@ public class Main {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		int[] nums = new int[9];
 		
-		for(int i = 0; i < nums.length; i++) {
+		for(int i = 0; i < 9; i++) {
 			nums[i] = Integer.parseInt(bf.readLine());
 		}
 		
 		int max = 0;
 		int index = 0;
 		
-		for (int i = 0; i < nums.length; i++ ) {
+		for (int i = 0; i < 9; i++ ) {
 			if (nums[i] > max) {
 				max = nums[i];
 				index = i + 1;
 			}
 		}
-		System.out.println(max + "\n" + index);
+		System.out.println(max);
+        System.out.println(index);
 	}
 }
