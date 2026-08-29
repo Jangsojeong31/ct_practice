@@ -5,15 +5,13 @@ class Solution {
         int answer = 0;
         
         Arrays.sort(citations);
-        
-        // 남은 논문 개수 찾기
-        for (int i = 0; i < citations.length; i++) {
-            
-            int h = citations.length - i;
-            
-            if (citations[i] >= h) {
-                return h;
+
+        for (int i = citations.length - 1; i >= 0; i--) {
+            int count = citations.length - i;
+            if (citations[i] >= count) {
+                answer = count;
             }
+            
         }
         
         return answer;
